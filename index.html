@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Evaluating mathematical reasoning of foundation models in visual contexts">
+  <meta name="keywords" content="MathVista, Math Vista">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Lightning V3 Demo</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+/Users/panlu/Library/Mobile Documents/com~apple~CloudDocs/ImageMath/visual-mathqa-server/data_final/images
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link rel="icon" href="./smallest-short.svg">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="smallest-short.svg" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista" style="vertical-align: middle">Smallest AI</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Voice AI Suite for Enterprises
+            <!-- <br> -->
+            <!-- with GPT-4V, Bard, and Other Large Multimodal Models -->
+          </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <img src="static/images/tease_scores_gpt4v.png" alt="geometric reasoning" width="99%"/>
+      <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
+      <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+      <span class="mathvista">MathVista</span>
+      across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
+      </p>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-4">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/tease_scores_version4_gemini.png" alt="geometric reasoning" width="84%"/>
+              <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
+              <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">MathVista</span>
+              across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b>
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/tease_scores_gpt4v.png" alt="geometric reasoning" width="84%"/>
+              <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
+              <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">MathVista</span>
+              across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section> -->
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
+  <h1 class="title is-1 mathvista">
+    <!-- <img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/> -->
+    <span style="vertical-align: middle">Lightning V3</span>
+  </h1>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p> -->
+            
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Overview</h2> -->
+        <div class="content has-text-justified">
+          <p>
+            <span class="lightning">Lightning V3</span> is our most human-sounding model yet. It goes beyond speed and clarity to capture how people really speak. With support for <b>disfluencies</b> like “uh” and “um,” <b>instruction tuning</b> for tone and style, and <b>zero-shot voice cloning</b>, it feels alive and expressive.  
+            You can guide it to speak calm, professional, playful, or excited, and it adapts instantly. With V3, you also gain the <b>ability to tweak speech delivery in real time based on an users's response</b>, making conversations more adaptive and context-sensitive.  
+            Compared to V2, which was built around fast and clear synthesis, <span class="lightning">Lightning V3</span> makes the leap to truly natural, human-like conversation.
+          </p>
+    
+          <p>
+            All the demo examples are organized into three categories to highlight Lightning V3’s new capabilities:
+            <br>– <b>Conversations</b>: Agent-to-agent dialogues that showcase natural back-and-forth flow, demonstrating how Lightning V3 can handle multi-turn interactions with context, tone shifts, and responsiveness.
+            <br>– <b>Instruction Tuning</b>: The same sentence delivered in different ways — calm, excited, professional, or playful — based on natural language instructions.
+            <br>– <b>Disfluencies</b>: Examples with natural pauses, “uh” and “you know,” showing how V3 handles real conversational flow.
+            <br>– <b>Varied Generation</b>: From cloning a client’s voice for personalized marketing, to adapting tone for customer support, to instantly generating unique characters for games or audiobooks — showcasing how voices and styles can flex across real-world scenarios.
+          </p>
+      
+
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column" style="margin-right: -20rem;">
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista">Generations</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Conversations</h2>
+        <!-- <p>One example for each reasoning skill required in <span class="mathvista">MathVista</span></p> -->
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <p><h3>Sample 1</h3></p>
+              <video src="./conversation-v3-logo1.mp4" controls></video>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <p><h3>Sample 2</h3></p>
+              <video src="./v3-conversation-logo2.mp4" controls></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-4">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Instruction tuned</h2>
+    
+        <div id="results-carousel" class="carousel results-carousel">
+    
+          <!-- Example Box -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 1</h3>
+    
+              <!-- No Instruction -->
+              <p class="mb-2"><strong>Text:  </strong> Anger boils in me, yet I keep pretending everything is fine.</p>
+              <audio src="./audios/boils_normal.wav" controls></audio>
+    
+              <!-- With Instruction -->
+              <p class="mb-3"><em>Instruction:</em> Speak in a sharp, low voice, emphasizing 'boils' to highlight intensity.              </p>
+              <audio src="./audios/boils_emphasis.wav" controls></audio>
+            </div>
+          </div>
+    
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 2</h3>
+    
+              <!-- No Instruction -->
+              <p class="mb-2"><strong>Text:  </strong>Schedule a call with the vendor and share the invite with the team</p>
+              <audio src="./audios/general_vendor.wav" controls></audio>
+    
+              <!-- With Instruction -->
+              <p class="mb-3"><strong>Instruction:</strong> Deliver this with a sharp, impatient edge. Raise the pitch slightly at Schedule a call to sound demanding.</p>
+              <audio src="./audios/annoyed_vendor.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+    
+              <!-- No Instruction -->
+              <p class="mb-2"><strong>Text:  </strong>You said this would be done today.</p>
+              <audio src="./audios/walter_normal.wav" controls></audio>
+    
+              <!-- With Instruction -->
+              <p class="mb-3"><strong>Instruction:</strong>Deliver this in an annoyed, slightly angry tone at a normal pace.</p>
+              <audio src="./audios/walter_angry.wav" controls></audio>
+            </div>
+          </div>
+          
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+    
+              <!-- No Instruction -->
+              <p class="mb-2"><strong>Text:  </strong>I was really looking forward to this I was really looking forward to this turning out well, but it doesn’t seem to be working the way I hoped.</p>
+              <audio src="./audios/hoped_normal.wav" controls></audio>
+    
+              <!-- With Instruction -->
+              <p class="mb-3"><strong>Instruction:</strong>Deliver this with sharper edges in your words. Let your tone carry frustration, raising your pitch slightly on doesn't seem and pressing down hard on working the way I hoped.              </p>
+              <audio src="./audios/hoped_angry.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 5</h3>
+    
+              <!-- No Instruction -->
+              <p class="mb-2"><strong>Text:  </strong>Thank you for reaching out. I’ve noted your request and will make sure its taken care of promptly.</p>
+              <audio src="./audios/casual_thanks.wav" controls></audio>
+    
+              <!-- With Instruction -->
+              <p class="mb-3"><strong>Instruction:</strong>Deliver this message in a professional, polite, and welcoming tone, as if you’re a customer support agent acknowledging the customer’s request.              </p>
+              <audio src="./audios/profession_thanks.wav" controls></audio>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>  
+
+    <div class="columns is-centered m-4">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Disfluencies</h2>
+    
+        <div id="results-carousel" class="carousel results-carousel">
+    
+          <!-- Example Box -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 1</h3>
+              <p class="mb-3"><strong>Text: </strong> Uh... I think we should probably check that again before sending this out.</p>
+              <audio src="./audios/uh.wav" controls></audio>
+            </div>
+          </div>
+    
+          <!-- Another Example -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong> Well... actually, no, that's not true. </p>
+              <audio src="./audios/well.wav" controls></audio>
+            </div>
+          </div>
+    
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong>Right? right?  I mean... I thought so. </p>
+              <audio src="./audios/right.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-3"><strong>Text: </strong> So, um... when exactly are we supposed to start?</p>
+              <audio src="./audios/so.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 5</h3>
+              <p class="mb-3"><strong>Text: </strong> but… but listen, it is not that simple.</p>
+              <audio src="./audios/but.wav" controls></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-4">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Zero Shot Generations</h2>
+    
+        <div id="results-carousel" class="carousel results-carousel">
+    
+          <!-- Example Box -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 1</h3>
+              <p class="mb-3"><strong>Text: </strong> Your scheduled system maintenance is set for Sunday, October 12th from 1 AM to 5 AM, during which time all services will be temporarily unavailable to apply necessary updates and security patches</p>
+              <audio src="./zs-goodones/datetime.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong> Would you like help resetting your password?</p>
+              <audio src="./zs-goodones/servicenow_2.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong> You have a new service request assigned to you.</p>
+              <audio src="./zs-goodones/servicenow_3.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-3"><strong>Text: </strong> Welcome to ServiceNow—how can I simplify your workflow today?</p>
+              <audio src="./zs-goodones/servicenow_5.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 5</h3>
+              <p class="mb-3"><strong>Text: </strong> I can help you schedule a meeting with HR. Just let me know your preferred date.</p>
+              <audio src="./zs-goodones/servicenow_9.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 6</h3>
+              <p class="mb-3"><strong>Text: </strong> Would you like to escalate this ticket for faster resolution?</p>
+              <audio src="./zs-goodones/servicenow_10.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 7</h3>
+              <p class="mb-3"><strong>Text: </strong> ServiceNow AI Agent has generated a solution for your request.</p>
+              <audio src="./zs-goodones/servicenow_13.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 8</h3>
+              <p class="mb-3"><strong>Text: </strong> You have new company policy documents to review.</p>
+              <audio src="./zs-goodones/servicenow_14.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 9</h3>
+              <p class="mb-3"><strong>Text: </strong> Let me fetch the latest knowledge articles for your query.</p>
+              <audio src="./zs-goodones/servicenow_16.wav" controls></audio>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 10</h3>
+              <p class="mb-3"><strong>Text: </strong> This resource is currently unavailable. Would you like to submit a new ticket?</p>
+              <audio src="./zs-goodones/servicenow_25.wav" controls></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+</body>
+</html>
