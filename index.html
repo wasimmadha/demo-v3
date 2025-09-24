@@ -46,10 +46,6 @@
   <script src="./static/js/question_card.js"></script>
 
   <script src="./static/js/leaderboard_testmini.js"></script>  
-  <script src="./data/results/output_folders.js" defer></script>
-  <script src="./data/results/model_scores.js" defer></script>
-
-  <script src="./visualizer/data/data_public.js" defer></script>
 </head>
 <body>
 
@@ -199,28 +195,154 @@
 
 <section class="section">
   <div class="container">
-
-    <div class="columns is-centered">
+    <div class="columns is-centered m-4">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Conversations</h2>
-        <!-- <p>One example for each reasoning skill required in <span class="mathvista">MathVista</span></p> -->
+        <h2 class="title is-3">Emotional</h2>
+    
         <div id="results-carousel" class="carousel results-carousel">
+          
+          <!-- Example Box -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <p><h3>Sample 1</h3></p>
-              <video src="./conversation-v3-logo1.mp4" controls></video>
+              <h3 class="title is-4">Sample 1</h3>
+              <p class="mb-3"><strong>Text: </strong>The basketball swished through the net at the final buzzer, and Coach Rodriguez pumped his fist triumphantly, shouting, "That's what happens when you believe in yourselves! What an incredible comeback from twenty points down!</p>
+              <audio src="./audios/basketball.wav" controls></audio>
             </div>
           </div>
+
           <div class="box m-5">
             <div class="content has-text-centered">
-              <p><h3>Sample 2</h3></p>
-              <video src="./v3-conversation-logo2.mp4" controls></video>
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong>Squinting at the contract details, Attorney Gonzalez tapped her pen suspiciously, Something about these terms doesn't quite add up. Why would they offer such generous conditions without any apparent benefit to themselves? It's making my skin crawl, this supposed generosity. I refuse to believe they're just being benevolent; there's a catch, I can feel it in my bones. Suddenly, a light of understanding dawned in her eyes, Ah, so that's their angle, quite clever actually! They've managed to bury the real kicker deep within the subclauses, a masterful play."              </p>
+              <audio src="./audios/gonzalez.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong>Walking out of the final examination, Naya threw her papers into the air with jubilation, exclaiming, Freedom at last! Four years of sleepless nights and endless studying are finally over.</p>
+              <audio src="./audios/jubiliation.wav" controls></audio>
+            </div>
+          </div>
+    
+          <!-- Another Example -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-3"><strong>Text: </strong> Finding his childhood teddy bear in a box of old belongings, Marcus felt a wave of tenderness as he murmured, Hello there, old friend. You've been waiting quite a while, havent you? So many stories we could tell.</p>
+              <audio src="./audios/so_many_stories.wav" controls></audio>
+            </div>
+          </div>
+    
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 5</h3>
+              <p class="mb-3"><strong>Text: </strong>The baby laughed with pure infectious delight, when she saw the brigh colorfull ballon floating above her crib, Her tiny hand reaching out eagerly.</p>
+              <audio src="./audios/laugh.wav" controls></audio>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="columns is-centered m-4">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Questions</h2>
+    
+        <div id="results-carousel" class="carousel results-carousel">
+          
+          <!-- Example Box -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 1</h3>
+              <p class="mb-3"><strong>Text: </strong>
+                Were you the one with the hand-held camera or the one with a weird-looking android phone?
+              </p>
+              <audio src="./audios/android_phone.wav" controls></audio>
+            </div>
+          </div>
 
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong>Who in their right mind would approve such a ridiculous plan?</p>
+              <audio src="./audios/approve.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong>To be perfectly clear, are you absolutely certain this is the final version? Given that we've already submitted three previous drafts this week, is this particular one definitively approved for release, without any further amendments? And if so, could we get that confirmation in writing before we notify the other departments? The team is on standby, ready to proceed based on this. So, can we consider this matter fully closed once we have that written approval?
+              </p>
+              <audio src="./audios/definitively.wav" controls></audio>
+            </div>
+          </div>
+    
+          <!-- Another Example -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-3"><strong>Text: </strong> Seriously now, just to be absolutely clear, who in their actual right mind would approve such a demonstrably ridiculous plan? It completely defies all logic, truly it does.</p>
+              <audio src="./audios/genuinely.wav" controls></audio>
+            </div>
+          </div>
+    
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 5</h3>
+              <p class="mb-3"><strong>Text: </strong>Do you want me to pick up anything from the grocery store?</p>
+              <audio src="./audios/grocery.wav" controls></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered m-4">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Syntatic Complexity</h2>
+    
+        <div id="results-carousel" class="carousel results-carousel">
+          
+          <!-- Example Box -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 1</h3>
+              <p class="mb-3"><strong>Text: </strong>
+                The musicians who performed the symphony that the composer, whose work had often been overlooked in his lifetime, wrote in his early years received a standing ovation.
+              </p>
+              <audio src="./audios/standing_ovation.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong>The important quarterly report that everyone in the office was anxiously expecting from corporate headquarters arrived several days late without any explanation or advance notice from management.</p>
+              <audio src="./audios/417.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong>Not only did she sing beautifully during the concert, but she also played piano with remarkable skill.
+              </p>
+              <audio src="./audios/421.wav" controls></audio>
+            </div>
+          </div>
+    
+          <!-- Another Example -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-3"><strong>Text: </strong> Although the meal that the chef, who had just returned from a culinary tour of Italy, prepared was delicious, the Greek guests barely noticed. </p>
+              <audio src="./audios/1176.wav" controls></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="columns is-centered m-4">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Instruction tuned</h2>
@@ -307,7 +429,7 @@
         <h2 class="title is-3">Disfluencies</h2>
     
         <div id="results-carousel" class="carousel results-carousel">
-    
+          
           <!-- Example Box -->
           <div class="box m-5">
             <div class="content has-text-centered">
@@ -316,11 +438,27 @@
               <audio src="./audios/uh.wav" controls></audio>
             </div>
           </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong>Wow! That joke was hilarious, I nearly fell off my chair.</p>
+              <audio src="./audios/wow.wav" controls></audio>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong>Haha, you’ve got me laughing so hard I can’t even speak.</p>
+              <audio src="./audios/haha.wav" controls></audio>
+            </div>
+          </div>
     
           <!-- Another Example -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 2</h3>
+              <h3 class="title is-4">Sample 4</h3>
               <p class="mb-3"><strong>Text: </strong> Well... actually, no, that's not true. </p>
               <audio src="./audios/well.wav" controls></audio>
             </div>
@@ -328,7 +466,7 @@
     
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 3</h3>
+              <h3 class="title is-4">Sample 5</h3>
               <p class="mb-3"><strong>Text: </strong>Right? right?  I mean... I thought so. </p>
               <audio src="./audios/right.wav" controls></audio>
             </div>
@@ -336,7 +474,7 @@
 
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 4</h3>
+              <h3 class="title is-4">Sample 6</h3>
               <p class="mb-3"><strong>Text: </strong> So, um... when exactly are we supposed to start?</p>
               <audio src="./audios/so.wav" controls></audio>
             </div>
@@ -344,7 +482,7 @@
 
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 5</h3>
+              <h3 class="title is-4">Sample 7</h3>
               <p class="mb-3"><strong>Text: </strong> but… but listen, it is not that simple.</p>
               <audio src="./audios/but.wav" controls></audio>
             </div>
