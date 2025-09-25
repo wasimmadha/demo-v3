@@ -200,51 +200,56 @@
         <h2 class="title is-3">Emotional</h2>
     
         <div id="results-carousel" class="carousel results-carousel">
-          
-          <!-- Example Box -->
+    
+          <!-- New Sample 1 -->
           <div class="box m-5">
             <div class="content has-text-centered">
               <h3 class="title is-4">Sample 1</h3>
-              <p class="mb-3"><strong>Text: </strong>The basketball swished through the net at the final buzzer, and Coach Rodriguez pumped his fist triumphantly, shouting, "That's what happens when you believe in yourselves! What an incredible comeback from twenty points down!</p>
-              <audio src="./audios/basketball.wav" controls></audio>
-            </div>
-          </div>
-
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 2</h3>
-              <p class="mb-3"><strong>Text: </strong>Squinting at the contract details, Attorney Gonzalez tapped her pen suspiciously, Something about these terms doesn't quite add up. Why would they offer such generous conditions without any apparent benefit to themselves? It's making my skin crawl, this supposed generosity. I refuse to believe they're just being benevolent;</p>
-              <audio src="./audios/gonzalez.wav" controls></audio>
-            </div>
-          </div>
-
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 3</h3>
               <p class="mb-3"><strong>Text: </strong>Walking out of the final examination, Naya threw her papers into the air with jubilation, exclaiming, Freedom at last! Four years of sleepless nights and endless studying are finally over.</p>
               <audio src="./audios/jubiliation.wav" controls></audio>
             </div>
           </div>
     
-          <!-- Another Example -->
+          <!-- New Sample 2 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 4</h3>
-              <p class="mb-3"><strong>Text: </strong> Finding his childhood teddy bear in a box of old belongings, Marcus felt a wave of tenderness as he murmured, Hello there, old friend. You've been waiting quite a while, haven't you? So many stories we could tell.</p>
+              <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-3"><strong>Text: </strong>Finding his childhood teddy bear in a box of old belongings, Marcus felt a wave of tenderness as he murmured, Hello there, old friend. You've been waiting quite a while, haven't you? So many stories we could tell.</p>
               <audio src="./audios/so_many_stories.wav" controls></audio>
             </div>
           </div>
     
+          <!-- New Sample 3 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 5</h3>
-              <p class="mb-3"><strong>Text: </strong>The baby laughed with pure infectious delight, when she saw the brigh colorfull ballon floating above her crib, Her tiny hand reaching out eagerly.</p>
+              <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-3"><strong>Text: </strong>Squinting at the contract details, Attorney Gonzalez tapped her pen suspiciously, Something about these terms doesn't quite add up. Why would they offer such generous conditions without any apparent benefit to themselves? It's making my skin crawl, this supposed generosity. I refuse to believe they're just being benevolent;</p>
+              <audio src="./audios/gonzalez.wav" controls></audio>
+            </div>
+          </div>
+    
+          <!-- New Sample 4 -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-3"><strong>Text: </strong>The baby laughed with pure infectious delight, when she saw the bright colorful balloon floating above her crib, her tiny hand reaching out eagerly.</p>
               <audio src="./audios/laugh.wav" controls></audio>
             </div>
           </div>
+    
+          <!-- New Sample 5 -->
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h3 class="title is-4">Sample 5</h3>
+              <p class="mb-3"><strong>Text: </strong>The basketball swished through the net at the final buzzer, and Coach Rodriguez pumped his fist triumphantly, shouting, "That's what happens when you believe in yourselves! What an incredible comeback from twenty points down!"</p>
+              <audio src="./audios/basketball.wav" controls></audio>
+            </div>
+          </div>
+    
         </div>
       </div>
     </div>
+    
     <div class="columns is-centered m-4">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Questions</h2>
@@ -345,85 +350,137 @@
     </div>
     <div class="columns is-centered m-4">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Instruction tuned</h2>
+        <h2 class="title is-3">Instruction Tuned</h2>
     
-        <div id="results-carousel" class="carousel results-carousel">
+        <div id="results-carousel-instructions" class="carousel results-carousel">
+          
     
-          <!-- Example Box -->
+          <!-- Sample 1 -->
           <div class="box m-5">
             <div class="content has-text-centered">
               <h3 class="title is-4">Sample 1</h3>
+              <p class="mb-2"><strong>Text: </strong>I never thought it would end this way, but here we are.</p>
     
-              <!-- No Instruction -->
-              <p class="mb-2"><strong>Text:  </strong> Anger boils in me, yet I keep pretending everything is fine.</p>
-              <audio src="./audios/boils_normal.wav" controls></audio>
+              <div class="mb-3">
+                <em>Angry</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Deliver in a sharp, forceful tone with raised volume and quick bursts of energy, sounding confrontational.</p>
+                </details>
+                <audio src="./audios/never_angry.wav" controls></audio>
+              </div>
     
-              <!-- With Instruction -->
-              <p class="mb-3"><em>Instruction:</em> Speak in a sharp, low voice, emphasizing 'boils' to highlight intensity.              </p>
-              <audio src="./audios/boils_emphasis.wav" controls></audio>
+              <div class="mb-3">
+                <em>Dramatic</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Deliver in a booming, exaggerated style with dramatic pauses, like performing on stage to an audience.</p>
+                </details>
+                <audio src="./audios/never_dramatic.wav" controls></audio>
+              </div>
+    
+              <div class="mb-3">
+                <em>Emotionally drained</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Deliver softly, with lowered volume and flat tone, sounding emotionally drained.</p>
+                </details>
+                <audio src="./audios/never_emotional.wav" controls></audio>
+              </div>
             </div>
           </div>
     
+          <!-- Sample 2 -->
           <div class="box m-5">
             <div class="content has-text-centered">
               <h3 class="title is-4">Sample 2</h3>
+              <p class="mb-2"><strong>Text: </strong>Everyone needs to evacuate the building immediately, this is not a drill.</p>
     
-              <!-- No Instruction -->
-              <p class="mb-2"><strong>Text:  </strong>Schedule a call with the vendor and share the invite with the team</p>
-              <audio src="./audios/general_vendor.wav" controls></audio>
+              <div class="mb-3">
+                <em>High Volume</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Deliver at high volume with uneven rhythm and urgency, as if yelling over a noisy crowd.</p>
+                </details>
+                <audio src="./audios/drill_high_volume.wav" controls></audio>
+              </div>
     
-              <!-- With Instruction -->
-              <p class="mb-3"><strong>Instruction:</strong> Deliver this with a sharp, impatient edge. Raise the pitch slightly at Schedule a call to sound demanding.</p>
-              <audio src="./audios/annoyed_vendor.wav" controls></audio>
+              <div class="mb-3">
+                <em>Soft</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Speak in a low, controlled voice with reduced volume, steady pacing, and quiet intensity.</p>
+                </details>
+                <audio src="./audios/drill_soft.wav" controls></audio>
+              </div>
             </div>
           </div>
-
+    
+          <!-- Sample 3 -->
           <div class="box m-5">
             <div class="content has-text-centered">
               <h3 class="title is-4">Sample 3</h3>
+              <p class="mb-2"><strong>Text: </strong>Your order has been successfully placed and will arrive within three business days.</p>
     
-              <!-- No Instruction -->
-              <p class="mb-2"><strong>Text:  </strong>You said this would be done today.</p>
-              <audio src="./audios/walter_normal.wav" controls></audio>
+              <div class="mb-3">
+                <em>Slow</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Deliver this word by word emphasizing each of them.</p>
+                </details>
+                <audio src="./audios/order_slow.wav" controls></audio>
+              </div>
+  
     
-              <!-- With Instruction -->
-              <p class="mb-3"><strong>Instruction:</strong>Deliver this in an annoyed, slightly angry tone at a normal pace.</p>
-              <audio src="./audios/walter_angry.wav" controls></audio>
+              <div class="mb-3">
+                <em>Energetic &amp; Excited</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Speak in a loud, energetic voice with high volume, fast pacing, and strong intensity, projecting urgency and excitement.</p>
+                </details>
+                <audio src="./audios/order_energetic.wav" controls></audio>
+              </div>
             </div>
           </div>
-          
+          <!-- Sample 4 -->
           <div class="box m-5">
             <div class="content has-text-centered">
               <h3 class="title is-4">Sample 4</h3>
+              <p class="mb-2"><strong>Text: </strong>We finally completed the project after months of hard work.</p>
     
-              <!-- No Instruction -->
-              <p class="mb-2"><strong>Text:  </strong>I was really looking forward to this I was really looking forward to this turning out well, but it doesn’t seem to be working the way I hoped.</p>
-              <audio src="./audios/hoped_normal.wav" controls></audio>
+              <div class="mb-3">
+                <em>Professional</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Deliver in a professional, composed tone with balanced pacing, like in a business update.</p>
+                </details>
+                <audio src="./audios/project_completion_business.wav" controls></audio>
+              </div>
     
-              <!-- With Instruction -->
-              <p class="mb-3"><strong>Instruction:</strong>Deliver this with sharper edges in your words. Let your tone carry frustration, raising your pitch slightly on doesn't seem and pressing down hard on working the way I hoped.              </p>
-              <audio src="./audios/hoped_angry.wav" controls></audio>
+              <div class="mb-3">
+                <em>Excited</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Speak in an overly excited, almost shouting tone with very fast pace, as if announcing a big victory on stage.</p>
+                </details>
+                <audio src="./audios/project_completion_excited.wav" controls></audio>
+              </div>
+    
+              <div class="mb-3">
+                <em>Somber</em>
+                <details>
+                  <summary>Show instruction</summary>
+                  <p>Read in a low, somber tone with heavy pacing, as if the news carries a sense of sadness or disappointment.</p>
+                </details>
+                <audio src="./audios/project_completion_somber.wav" controls></audio>
+              </div>
             </div>
           </div>
-
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <h3 class="title is-4">Sample 5</h3>
     
-              <!-- No Instruction -->
-              <p class="mb-2"><strong>Text:  </strong>Thank you for reaching out. I’ve noted your request and will make sure its taken care of promptly.</p>
-              <audio src="./audios/casual_thanks.wav" controls></audio>
-    
-              <!-- With Instruction -->
-              <p class="mb-3"><strong>Instruction:</strong>Deliver this message in a professional, polite, and welcoming tone, as if you’re a customer support agent acknowledging the customer’s request.              </p>
-              <audio src="./audios/profession_thanks.wav" controls></audio>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>  
-
+    </div>
+    
     <div class="columns is-centered m-4">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Disfluencies</h2>
